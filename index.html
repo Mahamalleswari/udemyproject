@@ -10,10 +10,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <script>
+        function changeMode(){
+            let mybody = document.body;
+            mybody.classList.toggle('mydark')
+        }
+    </script>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-sm bg-light navbar-light" style="background-color: white;">
+    <button id="darkm" onclick="changeMode()">DM</button>
+    <nav class="navbar navbar-expand-sm bg-light navbar-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
                 <img src="udemy.png" alt="" width="90" height="34">
@@ -36,23 +43,32 @@
 
                     <li class="nav-item"><a class="nav-link active" href="#"><span>Udemy Business</span> </a></li><br>
                     <li class="nav-item"><a class="nav-link active" href="#"><span>Teach On Udemy</span> </a></li><br>
-                    <li class="nav-item"><a href="#"><span><button class="cart"><i class="bi bi-cart3"style="color: black;"></button></i></span></a>
+                    <li class="nav-item"><a href="#"><span><button class="cart"><i class="bi bi-cart3"
+                                        style="color: black;"></button></i></span></a>
                     </li>
                     <li class="nav-item">
                         <a href="#">
-                            <span><button type="button" class="buttons1"
-                                    style="border:1px solid black;"><b>Login</b></button></span>
+                            <span>
+                                <button type="button" class="buttons1"
+                                    style="border:1px solid black;"><b>Login</b></button>
+                            </span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a href="#">
-                            <span><button type="button" class="buttons2"
-                                    style="border:1px solid black;"><b>SignUp</b></button></span>
+                            <span>
+                                <button type="button" class="buttons2"
+                                    style="border:1px solid black;"><b>SignUp</b></button>
+                            </span>
                         </a>
                     </li>
-                    <li class="nav-item"><a href="#">
-                            <span><button type="button" class="language" style="border:1px solid black;"><i
-                                        class="bi bi-globe"></i></button></a></span>
+                    <li class="nav-item">
+                        <a href="#">
+                            <span><button type="button" class="language" style="border:1px solid black;">
+                                    <i class="bi bi-globe"></i>
+                                </button>
+                            </span>
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -94,10 +110,193 @@
     </div>
 
     <div class="overview">
-        
+
     </div>
 
-    <div class="student-watch"></div>
+    <div class="students-view ">
+        <h2>student view</h2>
+        <div class="container">
+            <div class="horizontal-scroll">
+                <button class="btn-scroll" id="btn-scroll-left" onclick="scrollHorizontally(1)"><i class="bi bi-chevron-left"></i></button>
+                <button class="btn-scroll" id="btn-scroll-right" onclick="scrollHorizontally(-1)"><i class="bi bi-chevron-right"></i></button>
+                <div class="storys-container">
+                    <div class="courses">
+                        <a href="#">
+                            <img src="https://i.ibb.co/S7wBCSC/js1.jpg" alt="js1" alt="">
+                        </a><br>
+                        <div class="details">
+                            <h5>The Complete 2022 Web Development BootcampBecome</h5>
+                            <span>Dr.Anugela yu</span>
+                            <div class="stars">
+                                <span style="color:#e59819">4.7</span>
+                                <i class="bi bi-star-fill" style="color:#e59819;"></i>
+                                <i class="bi bi-star-fill" style="color:#e59819;"></i>
+                                <i class="bi bi-star-fill" style="color:#e59819;"></i>
+                                <i class="bi bi-star-fill" style="color:#e59819;"></i>
+                                <i class="bi bi-star-half" style="color:#e59819;"></i>
+                                <span>(18,369)</span>
+                            </div>
+                            <span><b><i class="bi bi-currency-rupee"></i></b></span><span><b>3,499</b></span><br>
+                            <button>Bestseller</button>
+                        </div>
+                    </div>
+                    <div class="courses">
+                        <a href="#">
+                            <img src="https://i.ibb.co/S7wBCSC/js1.jpg" alt="js1" alt="">
+                        </a><br>
+                        <div class="details">
+                            <h5>The Complete 2022 Web Development BootcampBecome</h5>
+                            <span>Dr.Anugela yu</span>
+                            <div class="stars">
+                                <span style="color:#e59819">4.7</span>
+                                <i class="bi bi-star-fill" style="color:#e59819;"></i>
+                                <i class="bi bi-star-fill" style="color:#e59819;"></i>
+                                <i class="bi bi-star-fill" style="color:#e59819;"></i>
+                                <i class="bi bi-star-fill" style="color:#e59819;"></i>
+                                <i class="bi bi-star-half" style="color:#e59819;"></i>
+                                <span>(18,369)</span>
+                            </div>
+                            <span><b><i class="bi bi-currency-rupee"></i></b></span><span><b>3,499</b></span><br>
+                            <button>Bestseller</button>
+                        </div>
+                    </div>
+                    <div class="courses">
+                        <a href="#">
+                            <img src="https://i.ibb.co/S7wBCSC/js1.jpg" alt="js1" alt="">
+                        </a><br>
+                        <div class="details">
+                            <h5>The Complete 2022 Web Development BootcampBecome</h5>
+                            <span>Dr.Anugela yu</span>
+                            <div class="stars">
+                                <span style="color:#e59819">4.7</span>
+                                <i class="bi bi-star-fill" style="color:#e59819;"></i>
+                                <i class="bi bi-star-fill" style="color:#e59819;"></i>
+                                <i class="bi bi-star-fill" style="color:#e59819;"></i>
+                                <i class="bi bi-star-fill" style="color:#e59819;"></i>
+                                <i class="bi bi-star-half" style="color:#e59819;"></i>
+                                <span>(18,369)</span>
+                            </div>
+                            <span><b><i class="bi bi-currency-rupee"></i></b></span><span><b>3,499</b></span><br>
+                            <button>Bestseller</button>
+                        </div>
+                    </div>
+                    <div class="courses">
+                        <a href="#">
+                            <img src="https://i.ibb.co/S7wBCSC/js1.jpg" alt="js1" alt="">
+                        </a><br>
+                        <div class="details">
+                            <h5>The Complete 2022 Web Development BootcampBecome</h5>
+                            <span>Dr.Anugela yu</span>
+                            <div class="stars">
+                                <span style="color:#e59819">4.7</span>
+                                <i class="bi bi-star-fill" style="color:#e59819;"></i>
+                                <i class="bi bi-star-fill" style="color:#e59819;"></i>
+                                <i class="bi bi-star-fill" style="color:#e59819;"></i>
+                                <i class="bi bi-star-fill" style="color:#e59819;"></i>
+                                <i class="bi bi-star-half" style="color:#e59819;"></i>
+                                <span>(18,369)</span>
+                            </div>
+                            <span><b><i class="bi bi-currency-rupee"></i></b></span><span><b>3,499</b></span><br>
+                            <button>Bestseller</button>
+                        </div>
+                    </div>
+                    <div class="courses">
+                        <a href="#">
+                            <img src="https://i.ibb.co/S7wBCSC/js1.jpg" alt="js1" alt="">
+                        </a><br>
+                        <div class="details">
+                            <h5>The Complete 2022 Web Development BootcampBecome</h5>
+                            <span>Dr.Anugela yu</span>
+                            <div class="stars">
+                                <span style="color:#e59819">4.7</span>
+                                <i class="bi bi-star-fill" style="color:#e59819;"></i>
+                                <i class="bi bi-star-fill" style="color:#e59819;"></i>
+                                <i class="bi bi-star-fill" style="color:#e59819;"></i>
+                                <i class="bi bi-star-fill" style="color:#e59819;"></i>
+                                <i class="bi bi-star-half" style="color:#e59819;"></i>
+                                <span>(18,369)</span>
+                            </div>
+                            <span><b><i class="bi bi-currency-rupee"></i></b></span><span><b>3,499</b></span><br>
+                            <button>Bestseller</button>
+                        </div>
+                    </div>
+                    <div class="courses">
+                        <a href="#">
+                            <img src="https://i.ibb.co/S7wBCSC/js1.jpg" alt="js1" alt="">
+                        </a><br>
+                        <div class="details">
+                            <h5>The Complete 2022 Web Development BootcampBecome</h5>
+                            <span>Dr.Anugela yu</span>
+                            <div class="stars">
+                                <span style="color:#e59819">4.7</span>
+                                <i class="bi bi-star-fill" style="color:#e59819;"></i>
+                                <i class="bi bi-star-fill" style="color:#e59819;"></i>
+                                <i class="bi bi-star-fill" style="color:#e59819;"></i>
+                                <i class="bi bi-star-fill" style="color:#e59819;"></i>
+                                <i class="bi bi-star-half" style="color:#e59819;"></i>
+                                <span>(18,369)</span>
+                            </div>
+                            <span><b><i class="bi bi-currency-rupee"></i></b></span><span><b>3,499</b></span><br>
+                            <button>Bestseller</button>
+                        </div>
+                    </div>
+                    <div class="courses">
+                        <a href="#">
+                            <img src="https://i.ibb.co/S7wBCSC/js1.jpg" alt="js1" alt="">
+                        </a><br>
+                        <div class="details">
+                            <h5>The Complete 2022 Web Development BootcampBecome</h5>
+                            <span>Dr.Anugela yu</span>
+                            <div class="stars">
+                                <span style="color:#e59819">4.7</span>
+                                <i class="bi bi-star-fill" style="color:#e59819;"></i>
+                                <i class="bi bi-star-fill" style="color:#e59819;"></i>
+                                <i class="bi bi-star-fill" style="color:#e59819;"></i>
+                                <i class="bi bi-star-fill" style="color:#e59819;"></i>
+                                <i class="bi bi-star-half" style="color:#e59819;"></i>
+                                <span>(18,369)</span>
+                            </div>
+                            <span><b><i class="bi bi-currency-rupee"></i></b></span><span><b>3,499</b></span><br>
+                            <button>Bestseller</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            let currentScrollPosition = 0;
+            let scrollAmount = 320;
+            
+            const sCont = document.querySelector(".storys-container");
+            const hScroll = document.querySelector(".horizontal-scroll");
+            const btnScrollLeft =document.querySelector("#btn-scroll-left")
+            const btnScrollright =document.querySelector("#btn-scroll-right")
+            btnScrollLeft.style.opacity="0";
+    
+            let maxScroll = -sCont.offsetwidth + hScroll.offsetwidth;
+            function scrollHorizontally(val)
+            {
+                currentScrollPosition += (val * scrollAmount);
+    
+                if(currentScrollPosition >0){
+                    currentScrollPosition =0;
+                    btnScrollLeft.style.opacity="0";
+                
+                }else{
+                    btnScrollLeft.style.opacity="1";
+                }
+                if(currentScrollPosition < maxScroll){
+                    currentScrollPosition = maxScroll;
+                    btnScrollright.style.opacity="0";
+    
+                }else{
+                    btnScrollright.style.opacity="1";
+                }
+    
+                sCont.style.left = currentScrollPosition + "px";
+            }
+        </script>
+    </div>
     <div class="top-categories"></div>
     <div class="feature-topics"></div>
     <div class="become an instructor"></div>
